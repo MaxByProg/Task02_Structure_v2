@@ -7,15 +7,16 @@ import java.util.*;
  */
 public class Department {
     private String name;
-    private Set workers = new HashSet();
+    private Map<Person, Post> workers;
 
     public Department(String n) {
         name = n;
     }
 
-    public void addPost(Post p) {
-        workers.add(p);
-        p.setDepartment(this);
+    public void addPersonAndPost(Person person, Post post) {
+        workers.put(person,post);
+        person.setDepartment(this);
+        post.setDepartment(this);
     }
 
     public String getName() {
@@ -25,6 +26,5 @@ public class Department {
     public void setName(String name) {
         this.name = name;
     }
-
 
 }

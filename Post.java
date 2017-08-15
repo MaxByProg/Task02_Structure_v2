@@ -3,13 +3,13 @@ package Task02_Structure_v2;
 /**
  * Created by mbikov on 09.08.2017.
  */
-public class Post extends Person {
+public class Post{
     private String post;
     private boolean boss;
+    private Person person;
     private Department department;
 
-    public Post(String n, String p, boolean b) {
-        name = n;
+    public Post(String p, boolean b) {
         post = p;
         boss = b;
     }
@@ -36,5 +36,13 @@ public class Post extends Person {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }
