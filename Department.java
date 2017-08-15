@@ -11,11 +11,11 @@ public class Department {
 
     public Department(String n) {
         name = n;
+        workers = new LinkedHashMap<>();
     }
 
     public void addPersonAndPost(Person person, Post post) {
         workers.put(person,post);
-        person.setDepartment(this);
         post.setDepartment(this);
     }
 
