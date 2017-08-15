@@ -6,7 +6,10 @@ package Task02_Structure_v2;
 public class Person {
     private String name;
     private Post post;
-    private Department department;
+
+    public Person(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -14,14 +17,6 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 
     public Post getPost() {
